@@ -3,87 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-/*$('document').ready(function(){
-    $('.joshi').css('background-color', 'yellow');
-    
-    $('p:last').css('color', 'red');    
-});*/
-
-
+//this code changes the last p code text in the html page to red
 $('document').ready(function(){
-    
-    $('#oneButton').bind('click', alertButtonClick);
-    
-    $('#textBox1').bind('blur', onBlurEvent)
-                  .bind('focus', onFocusEvent)
-                  .bind('onmousedown', onMDownEvent)
-                  .bind('onmouseup', onMUpEvent)
-                  .bind('change', onChangeEvent);
-          
-          $(window).resize(resizedWindow);
-          
-          $('#logo').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+    $('p:last').css('color', 'red');    
 
-          $('#twoButton').bind('dblClickedMe');
-});
-
-function alertButtonClick(){
-    alert("there was a button clicked");
-}
-
-function onBlurEvent()
-{
-    $("#second").html("you left the box");
-}
-
-function onFocusEvent()
-{
-    $("#second").html("you entered the box");
-}
-
-function onMDownEvent()
-{
-    $("#second").html("you left the box");
-} 
-
-function onMUpEvent()
-{
-    $("#second").html("you entered the box");
-}
-
-function onChangeEvent()
-{
-    $("#second").html("you changed the box");
-} 
-
-function resizedWindow()
-{
-    $("#second").html("Window was resized W: " + $(window).width() + "H:" + $(window).height());
-} 
-
-function mouseOverMe()
-{
-    $("#second").html("you put your cursor on my logo");
-} 
-
-function mouseOutMe()
-{
-    $("#second").html("you stopped touching my logo");
-}
-
-function dbClickedMe()
-{
-    $("#second").html("you double click my button");
-}
-
-
+//this code makes css hide objects on the page
 $('#show').css('visibility', 'hidden');
-
+//this tells the code if the object is clicked then hide the page
 $('#hide').bind('click', hideThePage);
-
+//this code tells the code if the 
 $('#show').bind('click', showThePage);
+
+$('#superHumans').accordion({header: "h3"});
+
+});
 
 function hideThePage(){
     $('#show').css('visibility', 'visible');
@@ -95,6 +28,8 @@ function showThePage(){
     $('div').show('fold', {}, 2500);
     $('#show').hide('puff', {}, 2500);
 }
+
+
 
 $("document").ready(function(){
     
