@@ -16,6 +16,7 @@ $('#show').bind('click', showThePage);
 
 $('#superHumans').accordion({header: "h3"});
 
+$('#section').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
 });
 
 function hideThePage(){
@@ -45,5 +46,15 @@ function replaceWHtml(){
 
 function replaceWText(){
     $('#h3Tag').text('<h6>Now I\'m an h6<\h6>');
+
+}
+
+function mouseOverMe(){
+    $("#second").html("hello");
+
+}
+
+function mouseOutMe(){
+    $("#second").html("bye");
 
 }
