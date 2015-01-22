@@ -17,6 +17,11 @@ $('document').ready(function() {
     $('#superHumans').accordion({header: "h3"});
 //
     $('#logo').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+
+    $('#replaceWHtml').bind('click', replaceWHtml);
+    $('#replaceWText').bind('click', replaceWText);
+    
+    $('#twoButton').bind('dblclick', dblClickMe);
 });
 //this code shows the page after being hidden
 function hideThePage(){
@@ -32,12 +37,7 @@ function showThePage(){
 
 
 
-$("document").ready(function() {
 
-    $('#replaceWHtml').bind('click', replaceWHtml);
-    $('#replaceWText').bind('click', replaceWText);
-
-});
 
 function replaceWHtml() {
     $('#h3Tag').html('<h6>Now I\'m an h6<\h6>');
@@ -50,11 +50,16 @@ function replaceWText() {
 }
 
 function mouseOverMe() {
-    $("#second").html("hello");
+   $("#second").text("hello");
 
 }
 
 function mouseOutMe() {
-    $("#second").html("bye");
+   $("#second").text("3rd Video Something");
+
+}
+
+function dblClickMe() {
+   $("#second").text("you double clicked me");
 
 }
